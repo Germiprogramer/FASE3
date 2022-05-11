@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from os import getenv
 import cgi
-from flask import Blueprint, render_template
+
 # IP o dirección del servidor SMTP.
 SMTP_SERVER = "smtp.[...].com"
 # Puerto.
@@ -109,13 +109,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-contacto = Blueprint ("contacto", __name__)
-@contacto.route("/")
-def home():
-  return render_template("index.html")
-
-@contacto.route("/new")
-def add_contacto():
-  return "saving a contact"
 
